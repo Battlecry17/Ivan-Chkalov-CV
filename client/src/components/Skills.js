@@ -182,7 +182,7 @@ const Additional = () => {
     },
   ];
 
-  const Skills_item = ({ img, title, text }) => {
+  const Skills_Item = ({ img, title, text }) => {
     const inputRef = useRef();
 
     const [Rotate, setRotate] = useState({
@@ -226,7 +226,7 @@ const Additional = () => {
   return (
     <>
       {add_skills.map(({ img, title, text }) => {
-        return <Skills_item img={img} title={title} text={text}></Skills_item>;
+        return <Skills_Item img={img} title={title} text={text}></Skills_Item>;
       })}
     </>
   );
