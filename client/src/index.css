@@ -194,8 +194,18 @@ footer div {
   height: 50px;
 }
 
+.footerIconsWrap{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 footer a {
   margin-right: 0.625rem;
+}
+
+footer a:nth-child(2) {
+  margin-right: 0 !important;
 }
 
 footer a:hover > svg path {
@@ -1250,9 +1260,10 @@ input[type="text"] {
   }
 
   #contact{
-    padding: 0;
-    border: none;
-    outline: none;
+    padding: 8px;
+    border-bottom: 1px solid #700b97 !important;
+    /* border: none;
+    outline: none; */
   }
 
   #contact:hover{

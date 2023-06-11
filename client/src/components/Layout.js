@@ -48,17 +48,19 @@ const Layout = () => {
           <p id="copyright">© 2023 Ivan Chkalov. All rights reserved.</p>
         </div>
         <div className="footerIcons">
-          {location === "home" ? (
-            <IconsHome></IconsHome>
-          ) : location === "skills" ? (
-            <IconsSkills></IconsSkills>
-          ) : location === "hobby" ? (
-            <IconsHobby></IconsHobby>
-          ) : location === "contact" ? (
-            <DownloadButton></DownloadButton>
-          ) : (
-            ""
-          )}
+          <div className="footerIconsWrap">
+            {location === "home" ? (
+              <IconsHome></IconsHome>
+            ) : location === "skills" ? (
+              <IconsSkills></IconsSkills>
+            ) : location === "hobby" ? (
+              <IconsHobby></IconsHobby>
+            ) : location === "contact" ? (
+              <DownloadButton></DownloadButton>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </footer>
     );
