@@ -15,7 +15,7 @@ const Hobby = () => {
       <Section
         title={"Movies & Series - my top "}
         divClass={"grid-quadro"}
-        // content={<>{<Movies></Movies>}</>}
+        content={<>{<Movies></Movies>}</>}
       ></Section>
 
       {/* <Section
@@ -46,7 +46,7 @@ const Gaming = () => {
   console.log("Called");
   useEffect(() => {
     axios
-      .get("/api/playstationP")
+      .get("https://ivan-chkalov-cv.onrender.com/api/playstationP")
       .then((response) => {
         setplaystationP(response.data);
         console.log(response.data.lateGames);
@@ -238,7 +238,7 @@ const Movies = () => {
 
   useEffect(() => {
     axios
-      .get("/api/moviesP")
+      .get("https://ivan-chkalov-cv.onrender.com/api/moviesP")
       .then((response) => {
         setMoviesP(response.data);
         // console.log(response.data[0]);

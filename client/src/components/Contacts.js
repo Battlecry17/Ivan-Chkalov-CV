@@ -178,7 +178,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("/api/formdata", {
+    fetch("https://ivan-chkalov-cv.onrender.com/api/formdata", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
