@@ -93,7 +93,7 @@ const ExpEdu = () => {
   return (
     <SectionDouble
       secClass={"grid-double"}
-      title1={"Experience"}
+      title2={"Experience"}
       title1_class={"eduexp_head"}
       content1={
         <div className="centerWrap">
@@ -123,7 +123,7 @@ const ExpEdu = () => {
           />
         </div>
       }
-      title2={"Education"}
+      title1={"Education"}
       content2={
         <div className="centerWrap">
           <DateItem
