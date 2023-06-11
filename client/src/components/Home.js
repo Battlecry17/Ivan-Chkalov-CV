@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Section, SectionDouble } from "./Layout";
 import { DownloadButton } from "./DownloadB";
 
@@ -12,6 +12,38 @@ const Home = () => {
   );
 };
 
+const Avatar = () => {
+  const [avatarImage, setAvatarImage] = useState(null);
+
+  useEffect(() => {
+    const storedImage = localStorage.getItem("avatarImage");
+    if (storedImage) {
+      setAvatarImage(storedImage);
+    } else {
+      const fetchAndStoreImage = async () => {
+        try {
+          const response = await fetch("/avatar.png");
+          const blob = await response.blob();
+
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const base64Image = reader.result;
+            localStorage.setItem("avatarImage", base64Image);
+            setAvatarImage(base64Image);
+          };
+          reader.readAsDataURL(blob);
+        } catch (error) {
+          console.error("Error fetching and storing image:", error);
+        }
+      };
+
+      fetchAndStoreImage();
+    }
+  }, []);
+
+  return <img src={avatarImage} id="avatar" alt="" />;
+};
+
 const AboutMe = () => {
   let description =
     "Full stack web developer with more than 5 years of experience in the IT field, have deep understating of the IT industry, knowledge of both server and client sides. Developed dozens of systems for GTA 5 RP project, based on web programming. I have work experience both in the team and by myself. I have organized my and the work of the staff for the last four years with great success. Provided solutions to the project issues with the best benefit for each side. Always ask myself, what improvements can I make both for the project and for me personally, what can I do better and how. Out of work, I am curios open-minded person, interested in different aspects of life. Passionate about building high-quality world-class web applications.";
@@ -23,7 +55,8 @@ const AboutMe = () => {
       content={
         <>
           <div className="ava_border">
-            <img src="/avatar.png" id="avatar" alt="" />
+            {/* <img src="/avatar.png" id="avatar" alt="" /> */}
+            <Avatar></Avatar>
             <div>
               <DownloadButton></DownloadButton>
             </div>
