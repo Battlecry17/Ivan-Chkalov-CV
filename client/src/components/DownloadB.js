@@ -6,7 +6,7 @@ const DownloadButton = () => {
 
   const downloadFile = () => {
     const fileName = "Ivan_Chkalov_CV.pdf";
-    fetch(`/api/download/${fileName}`, {
+    fetch(`https://ivan-chkalov-cv.onrender.com/api/download/${fileName}`, {
       method: "GET",
     })
       .then((response) => {
