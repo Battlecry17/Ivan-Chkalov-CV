@@ -13,6 +13,11 @@ const Hobby = () => {
         content={<Gaming></Gaming>}
       ></Section>
       <Section
+        title={"Guitar"}
+        divClass={"guitar"}
+        content={<Guitar></Guitar>}
+      ></Section>
+      <Section
         title={"Movies & Series - my top "}
         divClass={"grid-quadro"}
         content={<>{<Movies></Movies>}</>}
@@ -23,11 +28,6 @@ const Hobby = () => {
         divClass={""}
         content={<p>Description</p>}
       ></Section> */}
-      <Section
-        title={"Guitar"}
-        divClass={"guitar"}
-        content={<Guitar></Guitar>}
-      ></Section>
       <Section
         title={"Game Dev"}
         divClass={""}
@@ -58,7 +58,7 @@ const Gaming = () => {
   return (
     <>
       {playstationP.length === 0 ? (
-        <h1>Loading...</h1>
+        <h2>Loading...</h2>
       ) : (
         <>
           <div className="flex-center">
