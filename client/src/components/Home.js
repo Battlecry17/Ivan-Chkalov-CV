@@ -13,6 +13,7 @@ const Home = () => {
 };
 
 const Avatar = () => {
+  //кеширование изображения
   const [avatarImage, setAvatarImage] = useState(null);
 
   useEffect(() => {

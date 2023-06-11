@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Section } from "./Layout";
 import {
   IconStress,
@@ -91,8 +91,6 @@ const Language = ({ name, level }) => {
     );
   };
 
-  // setVisible("")
-
   return (
     <div onMouseLeave={() => setVisible("visible")}>
       <h1 className="lang_t">{"|" + name + "|"}</h1>
@@ -108,12 +106,41 @@ const Language = ({ name, level }) => {
   );
 };
 
-const Coding = ({ title, text, img }) => {
+const Coding = ({ title, text }) => {
+  //кеширование изображения
+  const [dotImage, setDotImage] = useState(null);
+
+  useEffect(() => {
+    const storedImage = localStorage.getItem("dotImage");
+    if (storedImage) {
+      setDotImage(storedImage);
+    } else {
+      const fetchAndStoreImage = async () => {
+        try {
+          const response = await fetch("/dot.png");
+          const blob = await response.blob();
+
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const base64Image = reader.result;
+            localStorage.setItem("dotImage", base64Image);
+            setDotImage(base64Image);
+          };
+          reader.readAsDataURL(blob);
+        } catch (error) {
+          console.error("Error fetching and storing image:", error);
+        }
+      };
+
+      fetchAndStoreImage();
+    }
+  }, []);
+
   const List = ({ item, index }) => {
     return (
       <>
         <div className="item_study" style={{ gridRowStart: index }}>
-          <img className="coding_icons" src="/dot.png"></img>
+          <img className="coding_icons" src={dotImage}></img>
           <p className="coding_h3">{item}</p>
         </div>
       </>
