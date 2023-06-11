@@ -40,10 +40,38 @@ const Contacts = () => {
 };
 
 const Info = ({ icon, title, text }) => {
+  const [arrowImage, setArrowImage] = useState(null);
+
+  useEffect(() => {
+    const storedImage = localStorage.getItem("arrowImage");
+    if (storedImage) {
+      setArrowImage(storedImage);
+    } else {
+      const fetchAndStoreImage = async () => {
+        try {
+          const response = await fetch("/arrow-left.png");
+          const blob = await response.blob();
+
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const base64Image = reader.result;
+            localStorage.setItem("arrowImage", base64Image);
+            setArrowImage(base64Image);
+          };
+          reader.readAsDataURL(blob);
+        } catch (error) {
+          console.error("Error fetching and storing image:", error);
+        }
+      };
+
+      fetchAndStoreImage();
+    }
+  }, []);
+
   return (
     <div className="infoCBlock">
       {icon}
-      <img src="/arrow-left.png" className="arrow_img"></img>
+      <img src={arrowImage} className="arrow_img"></img>
       <div className="imagesContent">
         <h2>{title}</h2>
         <div>
