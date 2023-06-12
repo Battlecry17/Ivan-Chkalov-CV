@@ -688,6 +688,7 @@ audio{
   transform: translateZ(-49px);
   filter: blur(15px);
   opacity: 0.5;
+  z-index: -2;
 }
 
 .rotate::after{
@@ -695,6 +696,7 @@ audio{
   background: linear-gradient(-45deg, #c55ffc, #700b97);
   transform: translateZ(-50px);
   box-sizing: border-box;
+  z-index: -1;
 }
 
 .add_h2{
@@ -1244,7 +1246,7 @@ input[type="text"] {
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 8%;
+    gap: 7%;
   }
 
   li{
@@ -1260,7 +1262,7 @@ input[type="text"] {
   }
 
   #contact{
-    padding: 8px;
+    padding: 2vw 4vw;
     border-bottom: 1px solid #700b97 !important;
     /* border: none;
     outline: none; */

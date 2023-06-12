@@ -202,10 +202,52 @@ const TopTrophies = ({
 
 const Guitar = () => {
   const [songN, setSongN] = useState("music/radioactive.mp3");
+
+  const songs = [
+    {
+      file: "allowed-to-be-happy.mp3",
+      title: "The Last of Us Part II - Allowed to be happy",
+    },
+    {
+      file: "naruto-sadness.mp3",
+      title: "Naruto - Sadness and Sorrow",
+    },
+    {
+      file: "flowers.mp3",
+      title: "Metallica - Nothing Else Matters",
+    },
+    {
+      file: "radioactive.mp3",
+      title: "Interstellar",
+    },
+  ];
+
+  const Songs = ({ number, file, title }) => {
+    return (
+      <>
+        <div className="guitar_songs">
+          <p className="num">{number}</p>
+          <a
+            onClick={() => {
+              setSongN(`music/${file}`);
+            }}
+          >
+            {title}
+          </a>
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <h2>Please choose one of the tracks</h2>
-      <div className="guitar_songs">
+      {songs.map((item, index) => {
+        return (
+          <Songs number={index + 1} file={item.file} title={item.title}></Songs>
+        );
+      })}
+      {/* <div className="guitar_songs">
         <p className="num">1</p>
         <a
           onClick={() => {
@@ -218,15 +260,19 @@ const Guitar = () => {
       <div className="guitar_songs">
         <p className="num">2</p>
         <a onClick={() => setSongN("music/wb.mp3")}>
-          The Last of Us Part II - Unbroken
+          Naruto - Sadness and Sorrow
         </a>
       </div>
       <div className="guitar_songs">
         <p className="num">3</p>
         <a onClick={() => setSongN("music/flowers.mp3")}>
-          Naruto - Sadness and Sorrow
+          Metallica - Nothing Else Matters
         </a>
       </div>
+      <div className="guitar_songs">
+        <p className="num">4</p>
+        <a onClick={() => setSongN("music/flowers.mp3")}>Interstellar</a>
+      </div> */}
 
       <ReactAudioPlayer src={songN} controls />
     </>

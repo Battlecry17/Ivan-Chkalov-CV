@@ -67,34 +67,34 @@ app.use(express.json());
 
 app.post("/api/formdata", (req, res) => {
   console.log(req.body);
-  writeFile(req.body, appendFile);
+  // writeFile(req.body, appendFile);
   res.status(200).send("Данные доставлены");
 });
 
-const readFile = (obj, append) => {
-  const file = JSON.parse(fs.readFileSync("messages.json"));
-  return append(obj, file);
-};
+// const readFile = (obj, append) => {
+//   const file = JSON.parse(fs.readFileSync("messages.json"));
+//   return append(obj, file);
+// };
 
-const appendFile = (object, array) => {
-  array.push(object);
-  return array;
-};
+// const appendFile = (object, array) => {
+//   array.push(object);
+//   return array;
+// };
 
-const writeFile = (message, func) => {
-  fs.writeFile(
-    "./messages.json",
-    JSON.stringify(readFile(message, func), null, 2),
-    "utf-8",
-    (err) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      console.log("Данные записаны в файл");
-    }
-  );
-};
+// const writeFile = (message, func) => {
+//   fs.writeFile(
+//     "./messages.json",
+//     JSON.stringify(readFile(message, func), null, 2),
+//     "utf-8",
+//     (err) => {
+//       if (err) {
+//         console.error(err);
+//         return;
+//       }
+//       console.log("Данные записаны в файл");
+//     }
+//   );
+// };
 
 //Заполнение Hobby movies
 
@@ -357,7 +357,7 @@ const getFullMedia = () => {
       movies.splice(4);
       series.splice(4);
       globalData = [...movies, ...series];
-      console.log(globalData);
+      // console.log(globalData);
 
       // res.send(page);
       return globalData;
@@ -397,7 +397,7 @@ const getFullMedia = () => {
           globalData[index].Image = responseImages.data.image.url;
           globalData[index].Plot = responsePlots.data.Plot;
           globalData[index]["IMDb Rating"] = responsePlots.data.imdbRating;
-          console.log(globalData);
+          // console.log(globalData);
 
           // Задержка из-за того, что нельзя посылать более 5 запросов в секунду
         }, (index + 1) * 550);
