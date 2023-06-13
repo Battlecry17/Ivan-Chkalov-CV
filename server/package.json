@@ -19,5 +19,8 @@
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "psn-api": "^2.9.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.14"
   }
 }

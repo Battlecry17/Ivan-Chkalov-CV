@@ -46,7 +46,7 @@ const Gaming = () => {
   console.log("Called");
   useEffect(() => {
     axios
-      .get("https://ivan-chkalov-cv.onrender.com/api/playstationP")
+      .get("https://ivan-cv.fly.dev/api/playstationP")
       .then((response) => {
         setplaystationP(response.data);
         console.log(response.data.lateGames);
@@ -284,7 +284,7 @@ const Movies = () => {
 
   useEffect(() => {
     axios
-      .get("https://ivan-chkalov-cv.onrender.com/api/moviesP")
+      .get("https://ivan-cv.fly.dev/api/moviesP")
       .then((response) => {
         setMoviesP(response.data);
         // console.log(response.data[0]);

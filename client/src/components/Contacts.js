@@ -206,7 +206,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("https://ivan-chkalov-cv.onrender.com/api/formdata", {
+    fetch("https://ivan-cv.fly.dev/api/formdata", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
