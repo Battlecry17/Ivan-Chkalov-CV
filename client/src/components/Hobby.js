@@ -393,19 +393,23 @@ const Movies = () => {
 
   return (
     <>
-      {moviesP.map((item) => {
-        return (
-          <MovieCard
-            url={item.URL}
-            title={item.Title}
-            rating={item["IMDb Rating"]}
-            year={item.Year}
-            description={item.Plot}
-            image={item.Image}
-            genres={item.Genres.split(", ")}
-          ></MovieCard>
-        );
-      })}
+      {moviesP.length === 0 ? (
+        <h2>Loading...</h2>
+      ) : (
+        moviesP.map((item) => {
+          return (
+            <MovieCard
+              url={item.URL}
+              title={item.Title}
+              rating={item["IMDb Rating"]}
+              year={item.Year}
+              description={item.Plot}
+              image={item.Image}
+              genres={item.Genres.split(", ")}
+            ></MovieCard>
+          );
+        })
+      )}
     </>
   );
 };
