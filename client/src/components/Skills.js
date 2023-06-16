@@ -30,7 +30,7 @@ const Skills = () => {
                 "Javascript",
                 "React",
                 "Jquery",
-                "Node JS",
+                "Node.js",
                 "Rest API",
                 "MYSQL",
                 "Photoshop",

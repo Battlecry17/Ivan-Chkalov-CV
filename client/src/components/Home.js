@@ -152,12 +152,12 @@ const Portfolio = () => {
       content={
         <>
           <Website
-            link={"https://www.google.com/"}
-            title={"Api search"}
+            link={"https://movies-rating-api.vercel.app/"}
+            title={"Movies Rating API"}
             background={"web1"}
           ></Website>
           <Website
-            link={"https://www.google.com/"}
+            link={"https://github.com/Battlecry17/GTA5-examples"}
             title={"GTA systems example"}
             background={"web2"}
           ></Website>
