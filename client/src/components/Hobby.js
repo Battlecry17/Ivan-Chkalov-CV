@@ -205,7 +205,7 @@ const Guitar = () => {
 
   const songs = [
     {
-      file: "allowed-to-be-happy.mp3",
+      file: "Allowed_to_be_happy.mp3",
       title: "The Last of Us Part II - Allowed to be happy",
     },
     {
@@ -213,11 +213,11 @@ const Guitar = () => {
       title: "Naruto - Sadness and Sorrow",
     },
     {
-      file: "flowers.mp3",
+      file: "Nothing_else_matters.mp3",
       title: "Metallica - Nothing Else Matters",
     },
     {
-      file: "radioactive.mp3",
+      file: "Interstellar.mp3",
       title: "Interstellar",
     },
   ];
@@ -247,33 +247,6 @@ const Guitar = () => {
           <Songs number={index + 1} file={item.file} title={item.title}></Songs>
         );
       })}
-      {/* <div className="guitar_songs">
-        <p className="num">1</p>
-        <a
-          onClick={() => {
-            setSongN("music/radioactive.mp3");
-          }}
-        >
-          The Last of Us Part II - Allowed to be happy
-        </a>
-      </div>
-      <div className="guitar_songs">
-        <p className="num">2</p>
-        <a onClick={() => setSongN("music/wb.mp3")}>
-          Naruto - Sadness and Sorrow
-        </a>
-      </div>
-      <div className="guitar_songs">
-        <p className="num">3</p>
-        <a onClick={() => setSongN("music/flowers.mp3")}>
-          Metallica - Nothing Else Matters
-        </a>
-      </div>
-      <div className="guitar_songs">
-        <p className="num">4</p>
-        <a onClick={() => setSongN("music/flowers.mp3")}>Interstellar</a>
-      </div> */}
-
       <ReactAudioPlayer src={songN} controls />
     </>
   );

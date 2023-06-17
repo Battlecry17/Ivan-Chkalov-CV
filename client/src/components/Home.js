@@ -47,7 +47,7 @@ const Avatar = () => {
 
 const AboutMe = () => {
   let description =
-    "Full stack web developer with more than 5 years of experience in the IT field, have deep understating of the IT industry, knowledge of both server and client sides. Developed dozens of systems for GTA 5 RP project, based on web programming. I have work experience both in the team and by myself. I have organized my and the work of the staff for the last four years with great success. Provided solutions to the project issues with the best benefit for each side. Always ask myself, what improvements can I make both for the project and for me personally, what can I do better and how. Out of work, I am curios open-minded person, interested in different aspects of life. Passionate about building high-quality world-class web applications.";
+    "Full stack web developer with more than 5 years of experience in the IT field, have a deep understating of the IT industry, and knowledge of both server and client sides. Developed dozens of systems for GTA 5 RP project, based on web programming. I have work experience both in the team and by myself. I have organized my and the work of the staff for the last four years with great success. Provided solutions to the project issues with the best benefit for each side. Always ask myself, what improvements can I make both for the project and for me personally, what can I do better, and how. Out of work, I am a curious open-minded person, interested in different aspects of life. Passionate about building high-quality world-class web applications.";
 
   return (
     <Section
