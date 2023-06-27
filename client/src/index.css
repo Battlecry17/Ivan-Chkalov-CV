@@ -59,8 +59,8 @@ h3{
 }
 
 h1 {
-  margin-top: 2vh;
-  margin-bottom: 4vh;
+  margin-top: 15px;
+  margin-bottom: 30px;
   font-weight: bolder;
 }
 
@@ -269,7 +269,7 @@ hr{
   width: 25%;
   margin: 0px 37.5%;
   border: 1px solid #700b97;
-  margin-bottom: 3vh;
+  margin-bottom: 20px;
 }
 
 svg {
@@ -417,7 +417,7 @@ audio{
   border: 1px solid #700b97;
   outline: 1px solid #700b97;
   transition: outline-offset 250ms ease;
-  padding: 1vh 3vh;
+  padding: 10px 25px;
 }
 
 #contact:hover,
@@ -435,7 +435,7 @@ audio{
 /* Home */
 
 .eduexp_head{
-  margin-bottom: 8vh;
+  margin-bottom: 50px;
 }
 
 .aboutFlex{
@@ -618,7 +618,6 @@ audio{
 
 .lang_t{
   margin-top: 0vh;
-  margin-bottom: 6vh;
 }
 
 .item_study{
@@ -717,7 +716,7 @@ audio{
 }
 
 .coding_h{
-  margin-bottom: 2vh;
+  margin-bottom: 15px;
 }
 
 .a1::after{
@@ -1043,7 +1042,7 @@ audio{
   height: auto;
   min-width: 5rem;
   height: 5rem;
-  padding-bottom: 2vw;
+  padding-bottom: 20px;
   width: 380px;
 }
 
