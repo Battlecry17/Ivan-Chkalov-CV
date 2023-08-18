@@ -91,7 +91,7 @@ const Gaming = () => {
           </div>
           <div className="flex-center">
             <div>
-              <img src="/ps_logo.png" id="ps_logo"></img>
+              <img src="/ps_logo.png" alt="playstation logo" id="ps_logo"></img>
               <h2 className="ps_title">Sony Playstation profile</h2>
             </div>
           </div>
@@ -188,7 +188,7 @@ const TopTrophies = ({
         <img src="/frame_1.png" className="trophy_img_ps" alt=""></img>
       </h2>
       <div>
-        <img src={trophy_image} className="trophy_large"></img>
+        <img src={trophy_image} alt="trophy" className="trophy_large"></img>
         <div className="ps_profile">
           <div>
             <p>{trophy_description + " (" + game_name + ")"}</p>
