@@ -133,10 +133,16 @@ const ExpEdu = () => {
             info={"Administrator and Community manager"}
           />
           <DateItem
-            addClass={"violet_bot"}
+            addClass={"violet_border"}
             date={"2021 - 2023"}
             title={"Egames software"}
             info={"Frontend developer, fullstack developer"}
+          />
+          <DateItem
+            addClass={"violet_bot"}
+            date={"2023 - now"}
+            title={"TVcom television"}
+            info={"Frontend developer"}
           />
         </div>
       }
