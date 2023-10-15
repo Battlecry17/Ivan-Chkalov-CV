@@ -6,7 +6,7 @@ const DownloadButton = () => {
 
   const downloadFile = () => {
     const fileName = "Ivan_Chkalov_CV.pdf";
-    fetch(`https://ivan-cv.fly.dev/api/download/${fileName}`, {
+    fetch(`https://polished-water-5219.fly.dev/api/download/${fileName}`, {
       method: "GET",
     })
       .then((response) => {

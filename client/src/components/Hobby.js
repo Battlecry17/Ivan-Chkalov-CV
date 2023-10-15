@@ -46,7 +46,7 @@ const Gaming = () => {
   console.log("Called");
   useEffect(() => {
     axios
-      .get("https://ivan-cv.fly.dev/api/playstationP")
+      .get("https://polished-water-5219.fly.dev/api/playstationP")
       .then((response) => {
         setplaystationP(response.data);
         console.log(response.data.lateGames);
@@ -257,7 +257,7 @@ const Movies = () => {
 
   useEffect(() => {
     axios
-      .get("https://ivan-cv.fly.dev/api/moviesP")
+      .get("https://polished-water-5219.fly.dev/api/moviesP")
       .then((response) => {
         setMoviesP(response.data);
         // console.log(response.data[0]);
