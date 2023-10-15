@@ -139,7 +139,7 @@ app.get("/api/playstationP", async (req, res) => {
 
   // Авторизация
   const myNpsso =
-    "zvTrfziJ5N1pK0YmON40fpNa80s5xlx5TpTg9DklQbdhnpevVev7J3W98vczrMtQ";
+    "1VC94xqKnoGuN6pb82513ZcpgxktA72A8rv16TIXkAdriHxxYw5ueoBLonrL10dz";
 
   const accessCode = await psApi.exchangeNpssoForCode(myNpsso);
   const authorization = await psApi.exchangeCodeForAccessToken(accessCode);
